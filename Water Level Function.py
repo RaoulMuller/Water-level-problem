@@ -95,3 +95,5 @@ assert WaterBetweenBeams([10, 0, 0.1, 0, 1, 0, 3, 0, 0.9, 0, 0, 10 ]) == 95, "Ex
 
 #Negative number present
 assert WaterBetweenBeams([-15, 1, 0, 3, 0, 3, 0, 2, 0, 1, 0, 2, 0, 2, 1, 2]) == "Error: Negative value in input.", "Expected: 'Error: Negative value in input.'"
+
+
