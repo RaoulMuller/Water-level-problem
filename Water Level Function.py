@@ -96,7 +96,13 @@ def Unit_Test_Water_Between_Beams():
 
     #Negative number present
     assert Water_Between_Beams([-15, 1, 0, 3, 0, 3, 0, 2, 0, 1, 0, 2, 0, 2, 1, 2]) == "Error: Negative value in input.", "Expected: 'Error: Negative value in input.'"
-
+    
+    #modified Arrays
+    assert Water_Between_Beams([2, 1, 4, 4, 3, 3, 1, 4, 2, 2, 2, 6, 3, 0, 1, 6]) == 26, "Expected: 26"
+    assert Water_Between_Beams([7, 0, 6, 4, 2, 4, 4, 1, 4, 2, 0, 2, 5, 2, 6]) == 42, "Expected: 42"
+    
+    #Short Array
+    assert Water_Between_Beams([6, 1, 2, 3, 3, 5]) == 11, "Expected: 11"
 
 if __name__ == "__main__":
     Unit_Test_Water_Between_Beams()
