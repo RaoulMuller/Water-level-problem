@@ -1,12 +1,12 @@
 # This function determines the amount of water (~~) collected between steel beams ([]).
 # An Array that describes the hight of the steel beams is required as an input.
 # Eg. A = [0, 1, 0, 3, 0, 3, 0, 2, 0, 1, 0, 2, 0, 2, 1, 2 ]
-# WaterBetweenBeams(A) = 14
+# Water_Between_Beams(A) = 14
 #         []~~[]                      3
 #         []  []~~[]~~~~~~[]~~[]~~[]  2
 #     []~~[]  []  []  []  []  [][][]  1
 #   ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  
-def WaterBetweenBeams(InputArray):
+def Water_Between_Beams(InputArray):
     
     #in case of Negative Numbers
     if min(InputArray)<0:
@@ -101,3 +101,4 @@ def Unit_Test_Water_Between_Beams():
 if __name__ == "__main__":
     Unit_Test_Water_Between_Beams()
     print("Everything passed")
+
