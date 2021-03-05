@@ -68,3 +68,30 @@ def WaterBetweenBeams(InputArray):
     
     print(CollectedWater)
     return(CollectedWater)
+
+
+#Unit test
+
+#Known Case
+assert WaterBetweenBeams([0, 1, 0, 3, 0, 3, 0, 2, 0, 1, 0, 2, 0, 2, 1, 2 ]) == 14, "Expected: 14"
+
+#known case in reverse
+assert WaterBetweenBeams([2, 1, 2, 0, 2, 0, 1, 0, 2, 0, 3, 0, 3, 0, 1, 0 ]) == 14, "Expected: 14"
+
+#Add 1 to element in known case 
+assert WaterBetweenBeams([1, 2, 1, 4, 1, 4, 1, 3, 1, 2, 1, 3, 1, 3, 2, 3 ]) == 14, "Expected: 14"
+
+#Known Case X1000
+assert WaterBetweenBeams([0, 1000, 0, 3000, 0, 3000, 0, 2000, 0, 1000, 0, 2000, 0, 2000, 1000, 2000 ]) == 14000, "Expected: 1400"
+
+#Known Case /10
+assert WaterBetweenBeams([0.0, 0.1, 0.0, 0.3, 0.0, 0.3, 0.0, 0.2, 0.0, 0.1, 0.0, 0.2, 0.0, 0.2, 0.1, 0.2 ]) == 1.4, "Expected: 1.4"
+
+#Test the ends
+assert WaterBetweenBeams([7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100 ]) == 70, "Expected: 10"
+
+#Mixed Decimals and whole numbers
+assert WaterBetweenBeams([10, 0, 0.1, 0, 1, 0, 3, 0, 0.9, 0, 0, 10 ]) == 95, "Expected: 95"
+
+#Negative number present
+assert WaterBetweenBeams([-15, 1, 0, 3, 0, 3, 0, 2, 0, 1, 0, 2, 0, 2, 1, 2]) == "Error: Negative value in input.", "Expected: 'Error: Negative value in input.'"
