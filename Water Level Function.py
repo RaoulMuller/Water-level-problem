@@ -8,7 +8,7 @@
 #   ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^  
 def Water_Between_Beams(InputArray):
     
-    #in case of Negative Numbers
+    #in case of Negative Numbers 
     if min(InputArray)<0:
         print("Error: Negative value in input.")
         return "Error: Negative value in input."
@@ -24,7 +24,7 @@ def Water_Between_Beams(InputArray):
     Levels = list(set(Array))
     Levels.sort()
 
-    #Find increment for each Level and add to List 'Weightings'
+    #Find increment for each Level and add to List 'LevelHeights'
     PreviousLevel = 0
     LevelHeights = []
     for Level in Levels:
@@ -38,7 +38,7 @@ def Water_Between_Beams(InputArray):
     Levels.sort(reverse=True)
 
 
-    #Find the first position for each Level
+    #Add the first position for each Level to FirstPostion
     FirstPostion = []
     MinIndex = len(Array)
     for BeamHeight in Levels:
@@ -46,7 +46,7 @@ def Water_Between_Beams(InputArray):
         MinIndex = min(MinIndex,BeamIndex)
         FirstPostion.append(min(MinIndex, BeamIndex))
 
-    #Find the last position for each Level
+    #Add the last position for each Level to LastPostion
     LastPostion = []
     MinIndex = len(Array)
     for BeamHeight in Levels:
@@ -60,7 +60,7 @@ def Water_Between_Beams(InputArray):
     #Find the area of each level
     LevelArea = [x * y for x, y in zip(LevelLength, LevelHeights)]
     
-    #Area Water can only fill where beam is not
+    #Subtract beam area from LevelArea
     CollectedWater = sum(LevelArea)-sum(Array)
     
     #in Case of decimals
@@ -70,7 +70,7 @@ def Water_Between_Beams(InputArray):
     return(CollectedWater)
 
 
-#Unit test
+#Unit test for Water_Between_Beams
 
 def Unit_Test_Water_Between_Beams():
     #Known Case
@@ -106,5 +106,5 @@ def Unit_Test_Water_Between_Beams():
 
 if __name__ == "__main__":
     Unit_Test_Water_Between_Beams()
-    print("Everything passed")
+    print("Unit Test passed")
 
